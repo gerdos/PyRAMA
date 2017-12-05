@@ -13,12 +13,13 @@ Example output:
 
 ### Dependencies:
 
-Running PyRAMA requires *matplotlib* and *biopython*
+Running PyRAMA requires *matplotlib*, *numpy* and *biopython*
 
 To install these on a standard Linux system:
 
     apt install python3-matplotlib
     apt install python3-biopython
+    apt install python3-numpy
 
 For the standard PSI and PHI preferences see:
 
