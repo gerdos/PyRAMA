@@ -9,7 +9,7 @@ Note: The script is able to read in multiple PDB files, however all of the torsi
 
 Example output:
 
-![Example output](https://i.imgur.com/BFt5VxG.png)
+![Example output](https://i.imgur.com/zOGxZ2r.png)
 
 ### Dependencies:
 
