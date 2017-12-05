@@ -18,5 +18,4 @@ To install these on a standard Linux system:
 
 For the standard PSI and PHI preferences see:
 
-Lovell *et al*. Structure validation by Calpha geometry: phi,psi and Cbeta deviation. 2003
-DOI: 10.1002/prot.10286
+Lovell *et al*. Structure validation by Calpha geometry: phi,psi and Cbeta deviation. 2003; DOI: 10.1002/prot.10286
