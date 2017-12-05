@@ -18,6 +18,7 @@ Lovell et al. Structure validation by Calpha geometry: phi,psi and Cbeta deviati
 DOI: 10.1002/prot.10286
 """
 
+# General variable for the background preferences
 rama_preferences = {
     "General": {
         "file": "pref_general.data",
@@ -40,6 +41,8 @@ rama_preferences = {
         "bounds": [0, 0.002, 0.02, 1],
     }
 }
+
+# Read in the expected torsion angles
 __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
 rama_pref_values = {}
 for key, val in rama_preferences.items():
@@ -62,6 +65,8 @@ outliers = {}
 for key, val in rama_preferences.items():
     normals[key] = {"x": [], "y": []}
     outliers[key] = {"x": [], "y": []}
+
+# Calculate the torsion angle of the inputs
 for inp in sys.argv[1:]:
     if not os.path.isfile(inp):
         print("{} not found!".format(inp))
@@ -95,6 +100,7 @@ for inp in sys.argv[1:]:
                             normals[aa_type]["x"].append(math.degrees(phi))
                             normals[aa_type]["y"].append(math.degrees(psi))
 
+# Generate the plots
 for idx, (key, val) in enumerate(sorted(rama_preferences.items(), key=lambda x: x[0].lower())):
     plt.subplot(2, 2, idx + 1)
     plt.title(key)
