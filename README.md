@@ -1,13 +1,17 @@
 # PyRAMA
 Python3 implementation of the Ramachandran plot
 
-Usage:
+### Usage:
 
 PyRAMA.py my_pdb_file.pdb
 
 Note: The script is able to read in multiple PDB files, however all of the torsion angles will be displayed on the same plot, with the same color!
 
-Dependencies:
+Example output:
+
+![Example output](https://imgur.com/a/NadYX)
+
+### Dependencies:
 
 Running PyRAMA requires *matplotlib* and *biopython*
 
