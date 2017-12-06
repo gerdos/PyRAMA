@@ -8,7 +8,7 @@ Python3 implementation of the Ramachandran plot
 
 ### Usage:
 
-pyrama my_pdb_file.pdb
+    pyrama my_pdb_file.pdb
 
 Note: The script is able to read in multiple PDB files, however all of the torsion angles will be displayed on the same plot, with the same color!
 
