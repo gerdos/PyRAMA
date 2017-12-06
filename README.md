@@ -5,17 +5,10 @@ Python3 implementation of the Ramachandran plot
 
     pip3 install pyrama
     
-or if you want to install it system wide
-
-    sudo pip3 install pyrama
-   
-In case of local installation the default location (on most systems) will be
-
-    $HOME/.local/lib/python3.5
 
 ### Usage:
 
-PyRAMA.py my_pdb_file.pdb
+pyrama my_pdb_file.pdb
 
 Note: The script is able to read in multiple PDB files, however all of the torsion angles will be displayed on the same plot, with the same color!
 
