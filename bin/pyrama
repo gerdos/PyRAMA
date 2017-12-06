@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+
+"""
+Written by Gábor Erdős, 2017
+Contact info: gerdos[at]caesar.elte.hu
+
+The preferences were calculated from the following artice:
+Lovell et al. Structure validation by Calpha geometry: phi,psi and Cbeta deviation. 2003
+DOI: 10.1002/prot.10286
+"""
+
+import sys
+from rama_lib.ramachandran_calc import ramachandran
+if len(sys.argv) < 2:
+    sys.exit("Usage: pyrama my_pdb_file.pdb")
+
+ramachandran(sys.argv[1:])
