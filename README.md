@@ -1,6 +1,8 @@
 # PyRAMA
 Python3 implementation of the Ramachandran plot
 
+*Package does work with Python2.7 but it is recommended to use Python3*
+
 ### For easy installation use pip:
 
     pip3 install pyrama
