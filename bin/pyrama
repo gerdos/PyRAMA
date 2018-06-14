@@ -11,7 +11,7 @@ DOI: 10.1002/prot.10286
 """
 
 import sys
-from pyrama.ramachandran_calc import calc_ramachandran, plot_ramachandran
+from pyrama import calc_ramachandran, plot_ramachandran
 if len(sys.argv) < 2:
     sys.exit("Usage: pyrama my_pdb_file.pdb")
 
