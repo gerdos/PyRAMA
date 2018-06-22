@@ -55,7 +55,6 @@ def calc_ramachandran(file_name_list):
     # Calculate the torsion angle of the inputs
     for inp in file_name_list:
         if not os.path.isfile(inp):
-            print("{} not found!".format(inp))
             continue
         structure = PDB.PDBParser().get_structure('input_structure', inp)
         for model in structure:
@@ -78,7 +77,6 @@ def calc_ramachandran(file_name_list):
                                 aa_type = "General"
                             if RAMA_PREF_VALUES[aa_type][int(math.degrees(psi)) + 180][int(math.degrees(phi)) + 180] < \
                                     RAMA_PREFERENCES[aa_type]["bounds"][1]:
-                                print("{} {} {} {}{} is an outlier".format(inp, model, chain, res_name, res_num))
                                 outliers[aa_type]["x"].append(math.degrees(phi))
                                 outliers[aa_type]["y"].append(math.degrees(psi))
                             else:
