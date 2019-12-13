@@ -10,7 +10,7 @@ import numpy as np
 from Bio import PDB
 from matplotlib import colors
 
-from config import RAMA_PREFERENCES
+from .config import RAMA_PREFERENCES
 
 RAMA_PREF_VALUES = None
 
@@ -41,8 +41,9 @@ def calc_ramachandran(file_name_list):
     :param file_name_list: List of PDB files to plot
     :return: Nothing
     """
+    global RAMA_PREF_VALUES
+
     if RAMA_PREF_VALUES is None:
-        global RAMA_PREF_VALUES
         RAMA_PREF_VALUES = _cache_RAMA_PREF_VALUES()
 
     # Read in the expected torsion angles
@@ -86,9 +87,8 @@ def calc_ramachandran(file_name_list):
 
     
 def plot_ramachandran(normals, outliers):
-
+    global RAMA_PREF_VALUES
     if RAMA_PREF_VALUES is None:
-        global RAMA_PREF_VALUES
         RAMA_PREF_VALUES = _cache_RAMA_PREF_VALUES()
         
 
