@@ -11,10 +11,15 @@ DOI: 10.1002/prot.10286
 """
 
 import sys
+import argparse
 from pyrama import calc_ramachandran, plot_ramachandran
-if len(sys.argv) < 2:
-    sys.exit("Usage: pyrama my_pdb_file.pdb")
 
-normals, outliers = calc_ramachandran(sys.argv[1:])
-plot_ramachandran(normals, outliers)
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Ramachandran plot tool")
+    parser.add_argument("pdb_files", nargs="+", help="PDB file(s) to analyze")
+    parser.add_argument("-o", "--output-dir", default=None, help="Directory to save plot files")
+    parser.add_argument("--no-show", action="store_true", help="Do not display plots, only save")
+    args = parser.parse_args()
 
+    results = calc_ramachandran(args.pdb_files)
+    plot_ramachandran(results, output_dir=args.output_dir, show_plots=not args.no_show)
